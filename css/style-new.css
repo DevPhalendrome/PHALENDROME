@@ -1,0 +1,230 @@
+/* PHALENDROME SOLUTIONS — Professional, Clean Styles */
+:root{
+  --bs-primary: #0b6ebf;
+  --bs-secondary: #063f63;
+  --bg:#ffffff;
+  --text:#1a1a1a;
+  --muted:#666;
+  --border:#e5e5e5;
+  --radius:6px;
+  --container:1100px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  font-family:'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  margin:0;
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased
+}
+
+/* Typography */
+h1{font-size:2.4rem; font-weight:600; margin-bottom:.6rem; line-height:1.2}
+h2{font-size:1.4rem; font-weight:600; margin-bottom:1rem; line-height:1.3}
+h3{font-size:1.1rem; font-weight:600}
+p{font-size:1rem; margin-bottom:.8rem}
+
+.container{max-width:var(--container); margin:0 auto; padding:3rem 1.25rem}
+.hero{padding:6rem 0; background:linear-gradient(180deg,#f9fbfe, #fff)}
+.lead{font-size:1.1rem; color:var(--muted); line-height:1.7}
+
+/* Accent text (no gradient) */
+.lead .accent{color:var(--bs-primary); font-weight:600}
+
+/* Button styling — solid colors only */
+.btn-primary{
+  background-color:var(--bs-primary);
+  border:none;
+  color:#fff;
+  font-weight:500;
+  padding:.6rem 1.2rem;
+  transition:background-color .2s ease, box-shadow .2s ease
+}
+
+.btn-primary:hover{
+  background-color:#095ea6;
+  box-shadow:0 4px 12px rgba(9,110,191,0.15)
+}
+
+.btn-primary:focus{
+  outline:2px solid var(--bs-primary);
+  outline-offset:2px
+}
+
+.btn-outline-primary{
+  color:var(--bs-primary);
+  border-color:var(--bs-primary);
+  font-weight:500;
+  transition:background-color .2s ease
+}
+
+.btn-outline-primary:hover{
+  background-color:rgba(11,110,191,0.04)
+}
+
+.btn-sm{
+  padding:.4rem .8rem;
+  font-size:.9rem
+}
+
+/* Card styling */
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:#fff;
+  box-shadow:none;
+  transition:border-color .2s ease, box-shadow .2s ease
+}
+
+.card:hover{
+  border-color:#d0d0d0;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04)
+}
+
+/* Showcase cards */
+.showcase-card{
+  cursor:pointer;
+  transition:transform .24s ease, border-color .24s ease
+}
+
+.showcase-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--bs-primary)
+}
+
+.showcase-card.active{
+  border-color:var(--bs-primary);
+  background:rgba(11,110,191,0.02)
+}
+
+.showcase-card .icon{
+  font-size:32px;
+  line-height:1;
+  margin-bottom:.8rem
+}
+
+/* Grid layouts */
+.grid{
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  margin-top:1.5rem
+}
+
+.grid article{
+  border:1px solid var(--border);
+  padding:1.5rem;
+  border-radius:var(--radius);
+  background:#fff
+}
+
+/* Form inputs */
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:.8rem;
+  margin-bottom:.8rem;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  font-family:inherit;
+  font-size:1rem;
+  transition:border-color .2s ease, box-shadow .2s ease
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:var(--bs-primary);
+  outline:none;
+  box-shadow:0 0 0 3px rgba(11,110,191,0.1)
+}
+
+/* Navigation */
+.navbar{
+  padding:.75rem 0;
+  background:#fff
+}
+
+.navbar-brand{
+  font-weight:700;
+  font-size:1.1rem
+}
+
+.nav-link{
+  transition:color .2s ease
+}
+
+.nav-link:hover{
+  color:var(--bs-primary)
+}
+
+/* Footer & sections */
+.muted{color:var(--muted)}
+
+.site-footer{
+  border-top:1px solid var(--border);
+  padding:1.5rem 0;
+  margin-top:2rem;
+  background:#fff;
+  font-size:.95rem
+}
+
+/* Dark theme */
+.theme-dark{
+  --bg:#0f1419;
+  --text:#e8eef5;
+  --muted:#97adc6;
+  --border:rgba(255,255,255,0.08)
+}
+
+.theme-dark body{
+  background:var(--bg);
+  color:var(--text)
+}
+
+.theme-dark .navbar{
+  background:#141a24
+}
+
+.theme-dark .card{
+  border-color:var(--border);
+  background:#141a24
+}
+
+.theme-dark .card:hover{
+  border-color:rgba(11,110,191,0.3);
+  background:#1a212e
+}
+
+.theme-dark .grid article{
+  border-color:var(--border);
+  background:#141a24
+}
+
+.theme-dark .btn-outline-primary:hover{
+  background-color:rgba(11,110,191,0.1)
+}
+
+.theme-dark .contact-form input,
+.theme-dark .contact-form textarea{
+  background:#1a212e;
+  color:var(--text);
+  border-color:var(--border)
+}
+
+.theme-dark .site-footer{
+  border-top-color:var(--border);
+  background:transparent
+}
+
+/* Responsive */
+@media (min-width:900px){
+  .hero h1{font-size:3rem}
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important}
+}

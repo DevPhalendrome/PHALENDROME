@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — PHALENDROME SOLUTIONS</title>
+  <meta name="description" content="Our services: Website design, digital platform development, IT consulting and support for SMBs.">
+  <meta property="og:title" content="Services — PHALENDROME SOLUTIONS">
+  <meta property="og:description" content="Website design, digital platforms, and IT consulting for SMBs.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="btn btn-outline-primary ms-3" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Our Services</h1>
+    <p class="lead">We provide three core digital solutions designed for small and medium businesses: professional website design, custom platform development, and ongoing IT consulting and support.</p>
+
+    <div class="services-grid mt-5">
+      <div class="service-card">
+        <div class="service-icon">I</div>
+        <h2>Website Design & Development</h2>
+        <p>Professional websites that perform. We design and develop responsive, conversion-focused websites that serve as powerful business tools.</p>
+        <ul>
+          <li><strong>Responsive design</strong> for all devices and screen sizes</li>
+          <li><strong>Conversion-focused</strong> layouts with clear calls-to-action</li>
+          <li><strong>Built-in functionality:</strong> contact forms, product catalogs, booking systems</li>
+          <li><strong>Performance optimized</strong> for speed, accessibility, and search engines</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">II</div>
+        <h2>Digital Platform Development</h2>
+        <p>Custom business systems built to scale. Beyond traditional websites, we develop custom platforms including client portals, booking systems, inventory interfaces, and CRM tools.</p>
+        <ul>
+          <li><strong>Custom business logic</strong> tailored to your specific workflows</li>
+          <li><strong>User authentication</strong> and role-based access control</li>
+          <li><strong>Real-time dashboards</strong> and reporting capabilities</li>
+          <li><strong>Integration-ready</strong> APIs for third-party tools and services</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">III</div>
+        <h2>IT Consulting & Support</h2>
+        <p>Strategic guidance and ongoing technical support. We help you make informed technology decisions and keep your digital presence secure and current.</p>
+        <ul>
+          <li><strong>Technology strategy</strong> aligned with your business objectives</li>
+          <li><strong>Ongoing maintenance</strong> and security updates</li>
+          <li><strong>Performance monitoring</strong> and continuous optimization</li>
+          <li><strong>Scalability planning</strong> for sustainable growth</li>
+        </ul>
+      </div>
+    </div>
+
+    <section style="padding: 6rem 1.25rem; background: #fff; text-align: center;">
+      <div class="container">
+        <h2 style="margin-bottom: 1.5rem;">Ready to Discuss Your Project?</h2>
+        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">Contact us to schedule a consultation. We'll listen to your objectives and provide clear recommendations for moving forward.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="text-align: center; padding: 3rem 1.25rem; border-top: 1px solid var(--border-light); background: var(--bg-secondary);">
+    <div class="container">
+      <p style="margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">© <span id="year3"></span> PHALENDROME SOLUTIONS — Solutions in Symmetry</p>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0;"><a href="privacy.html" style="color: var(--primary); text-decoration: none;">Privacy</a> | <a href="terms.html" style="color: var(--primary); text-decoration: none;">Terms</a></p>
+    </div>
+  </footer>
+
+  <!-- Google Analytics placeholder (replace G-XXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>
