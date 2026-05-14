@@ -2,96 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact — PHALENDROME SOLUTIONS</title>
-  <meta name="description" content="Contact PHALENDROME SOLUTIONS to schedule a consultation for website design, platform development or IT support.">
-  <meta property="og:title" content="Contact — PHALENDROME SOLUTIONS">
-  <meta property="og:description" content="Reach out to schedule a consultation about our digital solutions for SMBs.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | PHALENDROME SOLUTIONS | Start Your Project</title>
+  <meta name="description" content="Ready to build something exceptional? Contact PHALENDROME SOLUTIONS to discuss your website, platform, or digital strategy project.">
+  <meta property="og:title" content="Contact | PHALENDROME SOLUTIONS">
+  <meta property="og:description" content="Start your project with PHALENDROME SOLUTIONS. Free consultation, no obligation.">
+  <meta property="og:url" content="https://www.phalendromesolutions.co.za/contact.html">
+  <link rel="canonical" href="https://www.phalendromesolutions.co.za/contact.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS logo" height="40">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="PHALENDROME SOLUTIONS Home">
+        <img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS" height="38" width="200">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta" aria-current="page">Start a Project</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="btn btn-outline-primary ms-3" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
     </div>
-  </nav>
+  </header>
+
+  <div class="mobile-overlay">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+  </div>
 
   <main>
-    <section class="hero" style="padding: 6rem 1.25rem 4rem; background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(37, 99, 235, 0.04) 50%, var(--bg-tertiary) 100%); position: relative; overflow: hidden;">
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-grid-pattern"></div>
+        <div class="hero-glow hero-glow--1"></div>
+        <div class="hero-glow hero-glow--2"></div>
+      </div>
       <div class="container">
-        <h1>Get in Touch</h1>
-        <p class="lead">Ready to discuss your digital solution? Send us a message with details about your project, and we'll be in touch to schedule a consultation.</p>
+        <div class="hero-inner">
+          <div class="hero-badge reveal">Let's Talk</div>
+          <h1 class="reveal">Ready to <span class="gradient">build something</span> exceptional?</h1>
+          <p class="lead reveal">Tell us about your project and we'll map out a clear path forward. Free consultation, no pressure. Just great work waiting to happen.</p>
+        </div>
       </div>
     </section>
 
-    <section style="padding: 5rem 1.25rem;">
+    <section class="section">
       <div class="container">
-        <!-- Add your form endpoint (e.g. Formspree) to the data-endpoint attribute below: replace {your-form-id} with your Formspree ID -->
-        <form id="contactForm" class="contact-form" novalidate data-endpoint="https://formspree.io/f/{your-form-id}">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input id="name" name="name" type="text" required>
-            <span class="field-error" id="name-error"></span>
+        <div class="contact-split reveal">
+          <div>
+            <h2 style="margin-bottom:1.5rem;font-size:1.3rem;">Send us a message</h2>
+            <form id="contactForm" class="contact-form" novalidate data-endpoint="">
+              <div class="form-group">
+                <label for="name">Full Name <span style="color:#EF4444;">*</span></label>
+                <input id="name" name="name" type="text" class="form-input" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span style="color:#EF4444;">*</span></label>
+                <input id="email" name="email" type="email" class="form-input" required placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" class="form-input" placeholder="+27 XX XXX XXXX">
+              </div>
+              <div class="form-group">
+                <label for="message">Tell us about your project <span style="color:#EF4444;">*</span></label>
+                <textarea id="message" name="message" class="form-textarea" required placeholder="Describe your project, goals, timeline, or any questions..." rows="6"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+              <p class="form-result" id="result" aria-live="polite"></p>
+            </form>
           </div>
-
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input id="email" name="email" type="email" required>
-            <span class="field-error" id="email-error"></span>
+          <div>
+            <h2 style="margin-bottom:1.5rem;font-size:1.3rem;">Other ways to connect</h2>
+            <div class="contact-info">
+              <article class="contact-card reveal">
+                <div class="contact-card-label">Email</div>
+                <div class="contact-card-value"><a href="mailto:phalendrome@outlook.com">phalendrome@outlook.com</a></div>
+                <div class="contact-card-meta">We respond within 24 hours</div>
+              </article>
+              <article class="contact-card reveal">
+                <div class="contact-card-label">Phone</div>
+                <div class="contact-card-value"><a href="tel:+27677715045">(0)67 771 5045</a></div>
+                <div class="contact-card-meta">Mon–Fri, 9am–5pm SAST</div>
+              </article>
+              <article class="contact-card reveal">
+                <div class="contact-card-label">Location</div>
+                <div class="contact-card-value">South Africa</div>
+                <div class="contact-card-meta">Johannesburg &middot; Cape Town &middot; Durban &middot; Remote</div>
+              </article>
+              <article class="contact-card reveal">
+                <div class="contact-card-label">WhatsApp</div>
+                <div class="contact-card-value"><a href="https://wa.me/27677715045" target="_blank" rel="noopener">Chat with us</a></div>
+                <div class="contact-card-meta">Quick questions welcome</div>
+              </article>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input id="phone" name="phone" type="tel">
-          </div>
-
-          <div class="form-group">
-            <label for="message">Tell us about your project *</label>
-            <textarea id="message" name="message" placeholder="Describe your project, goals, or inquiry..." rows="7" required></textarea>
-            <span class="field-error" id="message-error"></span>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-          <p class="form-result" id="result" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <section style="padding: 5rem 1.25rem; background: var(--bg-secondary);">
-      <div class="container">
-        <h2>Other Ways to Reach Us</h2>
-        <div class="grid">
-          <article>
-            <h3>Email</h3>
-            <p><a href="mailto:phalendrome@outlook.com" style="color: var(--primary); font-weight: 600; text-decoration: none;">phalendrome@outlook.com</a></p>
-            <p class="muted" style="font-size: 0.95rem;">We typically respond within 24 hours</p>
-          </article>
-          <article>
-            <h3>Phone</h3>
-            <p><a href="tel:+27677715045" style="color: var(--primary); font-weight: 600; text-decoration: none;">(0)67 771 5045 / (0)72 392 7759</a></p>
-            <p class="muted" style="font-size: 0.95rem;">Available Monday through Friday, 9am–5pm SAST</p>
-          </article>
-          <article>
-            <h3>Service Area</h3>
-            <p>Serving small and medium businesses across South Africa</p>
-            <p class="muted" style="font-size: 0.95rem;">Johannesburg, Cape Town, Durban & Beyond</p>
-          </article>
         </div>
       </div>
     </section>
@@ -99,37 +115,42 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS" height="32">
-          <p>Solutions in Symmetry — reliable digital solutions for small and medium businesses across South Africa.</p>
+          <a href="index.html" class="logo"><img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS" height="32" width="160"></a>
+          <p>Premium digital solutions for businesses ready to make their mark. Based in South Africa, building for the world.</p>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
           <h4>Services</h4>
-          <a href="services.html">Website Design</a>
+          <a href="services.html">Web Design</a>
           <a href="services.html">Digital Platforms</a>
           <a href="services.html">IT Consulting</a>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About Us</a>
           <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:phalendrome@outlook.com">Email Us</a>
+          <a href="tel:+27677715045">(0)67 771 5045</a>
+          <a href="https://wa.me/27677715045" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year4"></span> PHALENDROME SOLUTIONS — Solutions in Symmetry</p>
-        <p>Email: <a href="mailto:phalendrome@outlook.com">phalendrome@outlook.com</a> | Phone: <a href="tel:+27677715045">(0)67 771 5045</a></p>
+        <p>&copy; <span id="year4"></span> PHALENDROME SOLUTIONS | Reg. No. 9451732512</p>
+        <p><a href="mailto:phalendrome@outlook.com">phalendrome@outlook.com</a> &middot; <a href="tel:+27677715045">(0)67 771 5045</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
   <a href="https://wa.me/27677715045" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" width="28" height="28" fill="white"><path d="M16 0C7.2 0 0 7.2 0 16c0 3.1 0.9 6.1 2.6 8.7L0.8 31.2l6.9-1.8C10.1 30.8 13 32 16 32c8.8 0 16-7.2 16-16S24.8 0 16 0z m7.5 22.6c-0.4 1.1-1.6 2-2.7 2.3-0.7 0.2-1.7 0.3-5-1.2-4.2-1.9-6.9-6.5-7.1-6.8-0.2-0.3-1.7-2.2-1.7-4.2s1.1-3 1.5-3.4c0.4-0.4 0.8-0.5 1.1-0.5s0.6 0 0.9 0c0.3 0 0.7-0.1 1.1 0.8 0.4 0.9 1.3 3.1 1.4 3.3 0.1 0.2 0.2 0.5 0 0.8-0.1 0.3-0.3 0.5-0.5 0.7-0.2 0.2-0.4 0.5-0.6 0.7-0.2 0.2-0.4 0.5-0.2 0.9 0.2 0.4 1.1 1.8 2.4 2.9 1.6 1.4 3 1.9 3.4 2.1 0.4 0.2 0.7 0.2 0.9 0.1 0.3-0.1 1.1-1.3 1.4-1.8 0.3-0.5 0.6-0.4 0.9-0.3 0.3 0.1 2.1 1 2.4 1.2 0.3 0.2 0.5 0.3 0.6 0.4 0.1 0.2 0.1 0.9-0.3 2z"/></svg>
+    <svg viewBox="0 0 32 32" fill="white"><path d="M16 0C7.2 0 0 7.2 0 16c0 3.1 0.9 6.1 2.6 8.7L0.8 31.2l6.9-1.8C10.1 30.8 13 32 16 32c8.8 0 16-7.2 16-16S24.8 0 16 0zm7.5 22.6c-.4 1.1-1.6 2-2.7 2.3-.7.2-1.7.3-5-1.2-4.2-1.9-6.9-6.5-7.1-6.8-.2-.3-1.7-2.2-1.7-4.2s1.1-3 1.5-3.4c.4-.4.8-.5 1.1-.5s.6 0 .9 0c.3 0 .7-.1 1.1.8.4.9 1.3 3.1 1.4 3.3.1.2.2.5 0 .8-.1.3-.3.5-.5.7-.2.2-.4.5-.6.7-.2.2-.4.5-.2.9.2.4 1.1 1.8 2.4 2.9 1.6 1.4 3 1.9 3.4 2.1.4.2.7.2.9.1.3-.1 1.1-1.3 1.4-1.8.3-.5.6-.4.9-.3.3.1 2.1 1 2.4 1.2.3.2.5.3.6.4.1.2.1.9-.3 2z"/></svg>
   </a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

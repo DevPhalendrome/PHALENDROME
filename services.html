@@ -2,120 +2,215 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Services — PHALENDROME SOLUTIONS</title>
-  <meta name="description" content="Our services: Website design, digital platform development, IT consulting and support for SMBs.">
-  <meta property="og:title" content="Services — PHALENDROME SOLUTIONS">
-  <meta property="og:description" content="Website design, digital platforms, and IT consulting for SMBs.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | PHALENDROME SOLUTIONS | Web Design, Platforms & IT Consulting</title>
+  <meta name="description" content="Explore our services: premium website design and development, custom digital platforms, and strategic IT consulting for South African businesses.">
+  <meta property="og:title" content="Services | PHALENDROME SOLUTIONS">
+  <meta property="og:description" content="Premium web design, digital platforms, and IT consulting for ambitious businesses.">
+  <meta property="og:url" content="https://www.phalendromesolutions.co.za/services.html">
+  <link rel="canonical" href="https://www.phalendromesolutions.co.za/services.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS logo" height="40">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="PHALENDROME SOLUTIONS Home">
+        <img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS" height="38" width="200">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" aria-current="page">Services</a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Start a Project</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="btn btn-outline-primary ms-3" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="container">
-    <h1>Our Services</h1>
-    <p class="lead">We provide three core digital solutions designed for small and medium businesses: professional website design, custom platform development, and ongoing IT consulting and support.</p>
+  <div class="mobile-overlay">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+  </div>
 
-    <div class="services-grid mt-5">
-      <div class="service-card">
-        <div class="service-icon">I</div>
-        <h2>Website Design & Development</h2>
-        <p>Professional websites that perform. We design and develop responsive, conversion-focused websites that serve as powerful business tools.</p>
-        <ul>
-          <li><strong>Responsive design</strong> for all devices and screen sizes</li>
-          <li><strong>Conversion-focused</strong> layouts with clear calls-to-action</li>
-          <li><strong>Built-in functionality:</strong> contact forms, product catalogs, booking systems</li>
-          <li><strong>Performance optimized</strong> for speed, accessibility, and search engines</li>
-        </ul>
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-grid-pattern"></div>
+        <div class="hero-glow hero-glow--1"></div>
+        <div class="hero-glow hero-glow--2"></div>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">II</div>
-        <h2>Digital Platform Development</h2>
-        <p>Custom business systems built to scale. Beyond traditional websites, we develop custom platforms including client portals, booking systems, inventory interfaces, and CRM tools.</p>
-        <ul>
-          <li><strong>Custom business logic</strong> tailored to your specific workflows</li>
-          <li><strong>User authentication</strong> and role-based access control</li>
-          <li><strong>Real-time dashboards</strong> and reporting capabilities</li>
-          <li><strong>Integration-ready</strong> APIs for third-party tools and services</li>
-        </ul>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">III</div>
-        <h2>IT Consulting & Support</h2>
-        <p>Strategic guidance and ongoing technical support. We help you make informed technology decisions and keep your digital presence secure and current.</p>
-        <ul>
-          <li><strong>Technology strategy</strong> aligned with your business objectives</li>
-          <li><strong>Ongoing maintenance</strong> and security updates</li>
-          <li><strong>Performance monitoring</strong> and continuous optimization</li>
-          <li><strong>Scalability planning</strong> for sustainable growth</li>
-        </ul>
-      </div>
-    </div>
-
-    <section style="padding: 6rem 1.25rem; background: #fff; text-align: center;">
       <div class="container">
-        <h2 style="margin-bottom: 1.5rem;">Ready to Discuss Your Project?</h2>
-        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">Contact us to schedule a consultation. We'll listen to your objectives and provide clear recommendations for moving forward.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Consultation</a>
+        <div class="hero-inner">
+          <div class="hero-badge reveal">What We Deliver</div>
+          <h1 class="reveal">Services that <span class="gradient">drive momentum</span></h1>
+          <p class="lead reveal">Three core offerings, one standard of excellence. Every project we take on gets the full weight of our focus and expertise.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="services-grid stag reveal">
+          <article class="card">
+            <div class="card-icon">W</div>
+            <h3>Website Design &amp; Development</h3>
+            <p>Professional, responsive websites engineered to captivate your audience and convert visitors into customers. We don't do templates. Every site is built from the ground up around your unique needs.</p>
+            <ul class="card-features">
+              <li>Responsive design for every device</li>
+              <li>Conversion-optimised layouts &amp; user flows</li>
+              <li>Performance &amp; SEO fundamentals</li>
+              <li>Contact forms, galleries &amp; booking</li>
+              <li>Content management system</li>
+              <li>Analytics &amp; tracking setup</li>
+            </ul>
+            <a href="contact.html" class="card-link">Start your website →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">P</div>
+            <h3>Digital Platform Development</h3>
+            <p>Custom web platforms designed to streamline your operations and scale with your growth. From client portals to booking engines, we build the digital infrastructure your business runs on.</p>
+            <ul class="card-features">
+              <li>Custom business logic &amp; workflows</li>
+              <li>User authentication &amp; role-based access</li>
+              <li>Real-time dashboards &amp; reporting</li>
+              <li>API-ready third-party integrations</li>
+              <li>Database design &amp; migration</li>
+              <li>Ongoing maintenance &amp; features</li>
+            </ul>
+            <a href="contact.html" class="card-link">Discuss your platform →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">C</div>
+            <h3>IT Consulting &amp; Support</h3>
+            <p>Strategic technology guidance and hands-on support to keep your digital presence secure, optimised, and ahead of the curve. Think of us as your fractional technology partner.</p>
+            <ul class="card-features">
+              <li>Technology strategy &amp; roadmapping</li>
+              <li>Ongoing maintenance &amp; security</li>
+              <li>Performance monitoring &amp; optimisation</li>
+              <li>Scalability planning</li>
+              <li>Technical documentation</li>
+              <li>Knowledge transfer &amp; training</li>
+            </ul>
+            <a href="contact.html" class="card-link">Book a consultation →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-label reveal">Common Questions</div>
+        <h2 class="section-title reveal">Everything you need to know</h2>
+        <p class="section-subtitle reveal">Straight answers to the questions we hear most often.</p>
+        <div class="faq-list reveal">
+          <div class="faq-item active">
+            <button class="faq-q">
+              How long does a typical website project take?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Most projects are delivered within 4–8 weeks, depending on complexity. We'll give you a clear timeline during our initial consultation, and we stick to it.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              What's your process like?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">We follow a proven five-phase process: Discovery → Strategy → Design → Build → Launch &amp; Grow. You'll have full visibility at every stage with regular updates and review checkpoints.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              Do you offer ongoing support after launch?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Absolutely. We offer ongoing maintenance and support packages to keep your site secure, updated, and performing at its peak. We're in it for the long haul.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              Where are you based? Do you work remotely?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">We're based in South Africa and work with clients across Johannesburg, Cape Town, Durban, and beyond. Everything is delivered remotely with clear communication throughout.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              How much does a website cost?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Every project is scoped individually based on your specific needs and goals. We'll provide a transparent, itemised proposal after our initial consultation. No surprises.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="section-label" style="justify-content:center;">Let's Build</div>
+          <h2>Ready to get started?</h2>
+          <p>Tell us about your project and we'll map out a clear path forward. Free consultation, no obligation. Just exceptional work waiting to happen.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS" height="32">
-          <p>Solutions in Symmetry — reliable digital solutions for small and medium businesses across South Africa.</p>
+          <a href="index.html" class="logo"><img src="assets/logo.svg" alt="PHALENDROME SOLUTIONS" height="32" width="160"></a>
+          <p>Premium digital solutions for businesses ready to make their mark. Based in South Africa, building for the world.</p>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
           <h4>Services</h4>
-          <a href="services.html">Website Design</a>
+          <a href="services.html">Web Design</a>
           <a href="services.html">Digital Platforms</a>
           <a href="services.html">IT Consulting</a>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About Us</a>
           <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:phalendrome@outlook.com">Email Us</a>
+          <a href="tel:+27677715045">(0)67 771 5045</a>
+          <a href="https://wa.me/27677715045" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year3"></span> PHALENDROME SOLUTIONS — Solutions in Symmetry</p>
-        <p>Email: <a href="mailto:phalendrome@outlook.com">phalendrome@outlook.com</a> | Phone: <a href="tel:+27677715045">(0)67 771 5045</a></p>
+        <p>&copy; <span id="year3"></span> PHALENDROME SOLUTIONS | Reg. No. 9451732512</p>
+        <p><a href="mailto:phalendrome@outlook.com">phalendrome@outlook.com</a> &middot; <a href="tel:+27677715045">(0)67 771 5045</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
   <a href="https://wa.me/27677715045" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" width="28" height="28" fill="white"><path d="M16 0C7.2 0 0 7.2 0 16c0 3.1 0.9 6.1 2.6 8.7L0.8 31.2l6.9-1.8C10.1 30.8 13 32 16 32c8.8 0 16-7.2 16-16S24.8 0 16 0z m7.5 22.6c-0.4 1.1-1.6 2-2.7 2.3-0.7 0.2-1.7 0.3-5-1.2-4.2-1.9-6.9-6.5-7.1-6.8-0.2-0.3-1.7-2.2-1.7-4.2s1.1-3 1.5-3.4c0.4-0.4 0.8-0.5 1.1-0.5s0.6 0 0.9 0c0.3 0 0.7-0.1 1.1 0.8 0.4 0.9 1.3 3.1 1.4 3.3 0.1 0.2 0.2 0.5 0 0.8-0.1 0.3-0.3 0.5-0.5 0.7-0.2 0.2-0.4 0.5-0.6 0.7-0.2 0.2-0.4 0.5-0.2 0.9 0.2 0.4 1.1 1.8 2.4 2.9 1.6 1.4 3 1.9 3.4 2.1 0.4 0.2 0.7 0.2 0.9 0.1 0.3-0.1 1.1-1.3 1.4-1.8 0.3-0.5 0.6-0.4 0.9-0.3 0.3 0.1 2.1 1 2.4 1.2 0.3 0.2 0.5 0.3 0.6 0.4 0.1 0.2 0.1 0.9-0.3 2z"/></svg>
+    <svg viewBox="0 0 32 32" fill="white"><path d="M16 0C7.2 0 0 7.2 0 16c0 3.1 0.9 6.1 2.6 8.7L0.8 31.2l6.9-1.8C10.1 30.8 13 32 16 32c8.8 0 16-7.2 16-16S24.8 0 16 0zm7.5 22.6c-.4 1.1-1.6 2-2.7 2.3-.7.2-1.7.3-5-1.2-4.2-1.9-6.9-6.5-7.1-6.8-.2-.3-1.7-2.2-1.7-4.2s1.1-3 1.5-3.4c.4-.4.8-.5 1.1-.5s.6 0 .9 0c.3 0 .7-.1 1.1.8.4.9 1.3 3.1 1.4 3.3.1.2.2.5 0 .8-.1.3-.3.5-.5.7-.2.2-.4.5-.6.7-.2.2-.4.5-.2.9.2.4 1.1 1.8 2.4 2.9 1.6 1.4 3 1.9 3.4 2.1.4.2.7.2.9.1.3-.1 1.1-1.3 1.4-1.8.3-.5.6-.4.9-.3.3.1 2.1 1 2.4 1.2.3.2.5.3.6.4.1.2.1.9-.3 2z"/></svg>
   </a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

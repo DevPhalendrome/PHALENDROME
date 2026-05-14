@@ -1,143 +1,144 @@
-// Small front-end behaviour for PHALENDROME site
-
-// Set year in footer (handle all possible year element IDs)
-const yearIds = ['year', 'year2', 'year3', 'year4'];
-const currentYear = new Date().getFullYear();
-yearIds.forEach(id => {
-  const el = document.getElementById(id);
-  if(el) el.textContent = currentYear;
-});
-
-const form = document.getElementById('contactForm');
-if(form){
-  const fields = { name: form.querySelector('[name="name"]'), email: form.querySelector('[name="email"]'), message: form.querySelector('[name="message"]') };
-  
-  function validateField(field) {
-    if(!field) return true;
-    
-    let isValid = true;
-    let errorMsg = '';
-    const fieldValue = field.value.trim();
-    
-    if(field.name === 'email') {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      isValid = fieldValue === '' || emailRegex.test(fieldValue);
-      errorMsg = 'Please enter a valid email address';
-      if(fieldValue === '') {
-        isValid = false;
-        errorMsg = 'Email is required';
-      }
-    } else if(field.hasAttribute('required')) {
-      isValid = fieldValue !== '';
-      errorMsg = 'This field is required';
-    }
-    
-    const existingError = field.parentNode?.querySelector('.field-error');
-    if(!isValid) {
-      field.classList.add('is-invalid');
-      if(!existingError) {
-        const err = document.createElement('div');
-        err.classList.add('field-error');
-        err.textContent = errorMsg;
-        field.parentNode.appendChild(err);
-      } else {
-        existingError.textContent = errorMsg;
-      }
-    } else {
-      field.classList.remove('is-invalid');
-      if(existingError) existingError.remove();
-    }
-    
-    return isValid;
-  }
-  
-  // Real-time field validation
-  Object.values(fields).forEach(field => {
-    if(field) {
-      field.addEventListener('blur', () => validateField(field));
-      field.addEventListener('input', () => validateField(field));
-    }
-  });
-
-  form.addEventListener('submit', async (e)=>{
-    e.preventDefault();
-    const name = form.querySelector('[name="name"]')?.value.trim();
-    const email = form.querySelector('[name="email"]')?.value.trim();
-    const phone = form.querySelector('[name="phone"]')?.value.trim() || '';
-    const message = form.querySelector('[name="message"]')?.value.trim();
-    const result = document.getElementById('result');
-    const submitBtn = form.querySelector('button[type="submit"]');
-
-    // Validate all fields before submission
-    Object.values(fields).forEach(field => {
-      if(field) validateField(field);
-    });
-    
-    if(!name || !email || !message){
-      result.textContent = 'Please complete all required fields.';
-      result.style.color = '#d9534f';
-      return;
-    }
-    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailRegex.test(email)) {
-      result.textContent = 'Please enter a valid email address.';
-      result.style.color = '#d9534f';
-      return;
-    }
-
-    // Disable button while sending
-    submitBtn.disabled = true;
-    result.style.color = '';
-    result.textContent = 'Sending...';
-
-    const endpoint = form.dataset.endpoint && form.dataset.endpoint.includes('{your-form-id}') ? null : form.dataset.endpoint;
-
-    if(endpoint){
-      try{
-        const payload = {name, email, phone, message};
-        const res = await fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        if(res.ok){
-          result.style.color = 'green';
-          result.textContent = 'Message received. We will be in touch shortly.';
-          form.reset();
-        } else {
-          const data = await res.json().catch(()=>null);
-          throw new Error((data && data.error) ? data.error : 'Submission failed');
-        }
-      } catch(err){
-        result.style.color = '#d9534f';
-        result.textContent = 'There was an error sending the message; opening your email client as a fallback.';
-        // fallback to mailto
-        const subject = encodeURIComponent('Website inquiry from ' + name);
-        const body = encodeURIComponent(message + '\n\nContact: ' + name + ' | ' + phone + ' | ' + email);
-        window.location.href = `mailto:phalendrome@outlook.com?subject=${subject}&body=${body}`;
-      }
-    } else {
-      // No endpoint set - use mailto fallback
-      result.textContent = 'Opening your email client...';
-      const subject = encodeURIComponent('Website inquiry from ' + name);
-      const body = encodeURIComponent(message + '\n\nContact: ' + name + ' | ' + phone + ' | ' + email);
-      window.location.href = `mailto:phalendrome@outlook.com?subject=${subject}&body=${body}`;
-    }
-
-    submitBtn.disabled = false;
-  });
-}
-
-/* Scroll reveal animations */
 (function(){
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
+  'use strict';
+
+  document.querySelectorAll('[id^="year"]').forEach(function(el){
+    if(el) el.textContent = new Date().getFullYear();
+  });
+
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
         entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal, .reveal-l, .reveal-r, .stag').forEach(function(el){
+    obs.observe(el);
+  });
+
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var active = item.classList.contains('active');
+      document.querySelectorAll('.faq-item.active').forEach(function(i){ i.classList.remove('active'); });
+      if(!active) item.classList.add('active');
+    });
+  });
+
+  var toggle = document.querySelector('.nav-toggle');
+  var overlay = document.querySelector('.mobile-overlay');
+
+  if(toggle && overlay){
+    toggle.addEventListener('click', function(){
+      var open = overlay.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    overlay.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        overlay.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  var form = document.getElementById('contactForm');
+  if(form){
+    var f = {
+      name: form.querySelector('[name="name"]'),
+      email: form.querySelector('[name="email"]'),
+      message: form.querySelector('[name="message"]')
+    };
+
+    function validate(field){
+      if(!field) return true;
+      var val = field.value.trim();
+      var ok = true;
+      var msg = '';
+
+      if(field.name === 'email'){
+        if(!val){ ok = false; msg = 'Email is required'; }
+        else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){ ok = false; msg = 'Please enter a valid email'; }
+      } else if(field.hasAttribute('required')){
+        if(!val){ ok = false; msg = 'This field is required'; }
+      }
+
+      var err = field.parentNode.querySelector('.field-error');
+      if(!ok){
+        field.classList.add('is-invalid');
+        if(!err){
+          var e = document.createElement('span');
+          e.className = 'field-error';
+          e.textContent = msg;
+          field.parentNode.appendChild(e);
+        } else { err.textContent = msg; }
+      } else {
+        field.classList.remove('is-invalid');
+        if(err) err.remove();
+      }
+      return ok;
+    }
+
+    Object.keys(f).forEach(function(k){
+      var field = f[k];
+      if(field){
+        field.addEventListener('blur', function(){ validate(field); });
+        field.addEventListener('input', function(){ if(field.classList.contains('is-invalid')) validate(field); });
+      }
+    });
+
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var name = (f.name && f.name.value.trim()) || '';
+      var email = (f.email && f.email.value.trim()) || '';
+      var phone = (form.querySelector('[name="phone"]') && form.querySelector('[name="phone"]').value.trim()) || '';
+      var message = (f.message && f.message.value.trim()) || '';
+      var result = document.getElementById('result');
+      var btn = form.querySelector('button[type="submit"]');
+
+      Object.keys(f).forEach(function(k){ if(f[k]) validate(f[k]); });
+
+      if(!name || !email || !message){
+        if(result){ result.textContent = 'Please complete all required fields.'; result.style.color = '#EF4444'; }
+        return;
+      }
+
+      btn.disabled = true;
+      if(result){ result.textContent = 'Sending...'; result.style.color = ''; }
+
+      var ep = form.dataset.endpoint;
+
+      if(ep && ep.indexOf('{your-form-id}') === -1){
+        try {
+          var res = await fetch(ep, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ name: name, email: email, phone: phone, message: message })
+          });
+          if(res.ok){
+            if(result){ result.textContent = 'Message received. We\'ll be in touch shortly.'; result.style.color = '#10B981'; }
+            form.reset();
+          } else { throw new Error('fail'); }
+        } catch(_){
+          if(result) result.textContent = 'Opening your email client...';
+          window.location.href = 'mailto:phalendrome@outlook.com?subject=' + encodeURIComponent('Website inquiry from ' + name) + '&body=' + encodeURIComponent(message + '\n\nContact: ' + name + ' | ' + phone + ' | ' + email);
+        }
+      } else {
+        if(result) result.textContent = 'Opening your email client...';
+        window.location.href = 'mailto:phalendrome@outlook.com?subject=' + encodeURIComponent('Website inquiry from ' + name) + '&body=' + encodeURIComponent(message + '\n\nContact: ' + name + ' | ' + phone + ' | ' + email);
+      }
+      btn.disabled = false;
+    });
+  }
+
+  var header = document.querySelector('.site-header');
+  if(header){
+    window.addEventListener('scroll', function(){
+      header.style.borderBottomColor = window.pageYOffset > 50 ? 'rgba(255,255,255,0.1)' : 'transparent';
+    }, { passive: true });
+  }
 })();

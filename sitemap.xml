@@ -30,4 +30,9 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.phalendromesolutions.co.za/404.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
 </urlset>
