@@ -1,57 +1,50 @@
 # PHALENDROME SOLUTIONS
 
-**Solutions in Symmetry** — premium digital solutions for small and medium businesses across South Africa.
+**Solutions in Symmetry.** Premium digital agency based in South Africa. Websites, platforms, and digital strategies for ambitious businesses.
 
-[![Live Site](https://img.shields.io/badge/Live-Site-blue?style=flat-square)](https://phalendromesolutions.co.za)
+[![Live Site](https://img.shields.io/badge/Live-Site-2563EB?style=flat-square)](https://devphalendrome.github.io/PHALENDROME/)
 
 ---
 
 ## About
 
-PHALENDROME SOLUTIONS is a South African digital agency providing website design, digital platform development, and IT consulting. This repository contains the company's public-facing website — a fully redesigned, enterprise-grade static site.
+PHALENDROME SOLUTIONS is a South African digital agency delivering website design, custom platform development, and IT consulting. This repository contains the company's public website.
 
 ## Tech Stack
 
-- **HTML5** — semantic, accessible markup with JSON-LD structured data
-- **CSS3** — custom property design system, CSS Grid/Flexbox, glassmorphism, animated gradients
-- **Vanilla JavaScript** — scroll animations (IntersectionObserver), animated counters, form validation, FAQ accordion, mobile nav
-- **Google Fonts** — Inter typeface (400–900 weights)
-
-### Design System
-- 1004-line custom CSS with design tokens
-- Dark mode support via `prefers-color-scheme`
-- Reduced motion support via `prefers-reduced-motion`
-- Glassmorphism header with backdrop-filter
-- Animated gradient blobs on hero sections
-- Scroll-triggered reveal animations (4 variants)
-- Staggered entrance animations
+- **HTML5** with JSON-LD structured data
+- **CSS3** custom property design system (1017 lines)
+- **Vanilla JavaScript** with IntersectionObserver animations, animated counters, FAQ accordion, full-screen mobile overlay
+- **Google Fonts** Inter (300-900)
 
 ## Pages
 
 | Page | Description |
 |------|-------------|
-| `index.html` | Home — hero with animated blobs, stats bar, services grid, process timeline, testimonials, CTA |
-| `about.html` | Company story, philosophy, core values, design philosophy |
-| `services.html` | Detailed service breakdown with FAQ accordion |
-| `contact.html` | Split layout: form + contact info cards with WhatsApp integration |
+| `index.html` | Hero with animated glows, services grid, process timeline, value props, CTA |
+| `about.html` | Company story, philosophy, core values, symmetrical design visual |
+| `services.html` | Service breakdown with feature lists and FAQ accordion |
+| `contact.html` | Split layout form + contact info cards with WhatsApp |
 | `privacy.html` | Privacy Policy |
 | `terms.html` | Terms of Service |
-| `404.html` | Premium error page with animated blobs |
+| `404.html` | Premium error page |
 
 ## Key Features
 
-- Zero external CSS frameworks (Bootstrap removed)
-- Enterprise-grade visual design (Stripe/Linear/Vercel inspired)
-- WCAG 2.1 AA accessibility
-- JSON-LD structured data for SEO
+- Zero external frameworks
+- Dark premium design system (navy/black + blue/cyan accents)
+- Glassmorphism header with backdrop filter
+- Full-screen mobile overlay navigation
+- Animated hero glow effects
+- Scroll triggered reveal animations with staggered children
+- Dark mode via `prefers-color-scheme`
+- Reduced motion support via `prefers-reduced-motion`
+- JSON-LD LocalBusiness schema
 - Open Graph + Twitter Card meta tags
-- Mobile-first responsive design
 - WhatsApp floating button
-- Company registration number in footer: **9451732512**
+- Company registration: **9451732512** in footer
 
 ## Setup
-
-No build step required. Open any `.html` file in a browser or serve locally:
 
 ```bash
 npx serve
@@ -59,13 +52,13 @@ npx serve
 
 ## Deployment
 
-The site is deployed via **GitHub Pages** from the `main` branch root.
+GitHub Pages from the `main` branch root.
 
-**Live URL:** https://phalendromesolutions.co.za
+**Live:** https://devphalendrome.github.io/PHALENDROME/
 
 ## Contact
 
-- **Email:** [phalendrome@outlook.com](mailto:phalendrome@outlook.com)
+- **Email:** phalendrome@outlook.com
 - **Phone:** (0)67 771 5045
-- **WhatsApp:** [+27677715045](https://wa.me/27677715045)
-- **Registration:** 2025 / 9451732512
+- **WhatsApp:** +27677715045
+- **Registration:** 9451732512
