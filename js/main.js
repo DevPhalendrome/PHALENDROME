@@ -129,7 +129,15 @@ if(form){
   });
 }
 
-/* Theme handling and dynamic showcase */
+/* Scroll reveal animations */
 (function(){
-  // Placeholder for future theme implementation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
