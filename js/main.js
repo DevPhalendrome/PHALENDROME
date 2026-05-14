@@ -115,14 +115,14 @@ if(form){
         // fallback to mailto
         const subject = encodeURIComponent('Website inquiry from ' + name);
         const body = encodeURIComponent(message + '\n\nContact: ' + name + ' | ' + phone + ' | ' + email);
-        window.location.href = `mailto:you@phalendromesolutions.co.za?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:phalendrome@outlook.com?subject=${subject}&body=${body}`;
       }
     } else {
       // No endpoint set - use mailto fallback
       result.textContent = 'Opening your email client...';
       const subject = encodeURIComponent('Website inquiry from ' + name);
       const body = encodeURIComponent(message + '\n\nContact: ' + name + ' | ' + phone + ' | ' + email);
-      window.location.href = `mailto:you@phalendromesolutions.co.za?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:phalendrome@outlook.com?subject=${subject}&body=${body}`;
     }
 
     submitBtn.disabled = false;
