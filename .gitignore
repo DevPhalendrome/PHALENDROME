@@ -1,0 +1,17 @@
+﻿# OS
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Project-specific - these are business documents, not website assets
+PHALENDROME_SOLUTIONS_Documents/
